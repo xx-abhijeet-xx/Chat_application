@@ -40,6 +40,6 @@ export async function setPresence(userId: string): Promise<void> {
 export const K   = { conv: (id: string) => `conv:${id}`, presence: (id: string) => `presence:${id}` };
 export const TTL = { presence: 35, rateLimit: 60 };
 // Named exports for legacy imports
-export const redis      = { incr: async () => 0, expire: async () => 0, setex: async () => 0, del: async () => 0 };
-export const publisher  = { publish: async () => 0 };
-export const subscriber = { subscribe: async () => 0, on: () => {} };
+export const redis      = { incr: async (..._a: any[]) => 0, expire: async (..._a: any[]) => 0, setex: async (..._a: any[]) => 0, del: async (..._a: any[]) => 0 };
+export const publisher  = { publish: async (..._args: any[]) => 0 };
+export const subscriber = { subscribe: async (..._args: any[]) => 0, on: (..._args: any[]) => {} };

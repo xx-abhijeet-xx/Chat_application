@@ -46,9 +46,9 @@ function Lightbox({ src, name, onClose }: { src: string; name?: string | null; o
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm animate-fade-up" onClick={onClose}>
       <div className="absolute top-4 right-4 flex gap-2">
-        <button onClick={handleDownload}
+        <button onClick={e => { e.stopPropagation(); handleDownload(); }}
           className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white text-[0.75rem] font-medium transition-colors"
-          onClick={e => { e.stopPropagation(); handleDownload(); }}>
+          >
           <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           Download
         </button>
