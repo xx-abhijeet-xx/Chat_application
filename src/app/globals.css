@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body { height: 100%; overflow: hidden; background: #0b0c10; color: #e2e8f0; }
+  ::-webkit-scrollbar { width: 3px; height: 3px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: #1a1e2e; border-radius: 10px; }
+  * { box-sizing: border-box; }
+}
+
+@layer utilities {
+  .text-gradient { background: linear-gradient(135deg,#63b3ff,#a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .bg-gradient-accent { background: linear-gradient(135deg,#63b3ff,#a78bfa); }
+  .scrollbar-none { scrollbar-width: none; }
+  .scrollbar-none::-webkit-scrollbar { display: none; }
+}
